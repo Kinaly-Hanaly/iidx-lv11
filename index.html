@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142099124-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142099124-2');
+  </script>
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>SP☆11 AAAめざせの表</title>
+</head>
+
+<body>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous"></script>
+
+
+  <script src="js/handler.js" charset="utf-8"></script>
+  <script src="js/handler_score.js" charset="utf-8"></script>
+  <script src="js/aaa_table_list.js" charset="utf-8"></script>
+
+
+
+  <div class="container">
+    <h2>SP☆11 AAAめざせの表</h2>
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">AAA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ex-hard.html">EX-HARD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="full_combo.html">F-COMBO</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="container mt-3">
+    <div class="accordion" id="accordionMenu">
+      <div class="card">
+        <div class="card-header" id="headingDescription">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseDescription" aria-expanded="true" aria-controls="collapseDescription">
+              説明
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseDescription" class="collapse" aria-labelledby="headingDescription" data-parent="#accordionMenu">
+          <div class="card-body">
+            <h4>なにこれ？</h4>
+            <p>
+              IIDXのSP☆11譜面について、皆伝さんのAAA率を計算したものです。自分のAAA増やしの参考にしたくて作りました。<br />
+              「paste CSV」のテキストボックスに公式サイトのCSV(SP)を貼り付け「load CSV」ボタンをクリックすると、自分のスコアと比較できます。<br />
+              保存機能は作ってないので、スクショを撮るなりして使ってください。
+            </p>
+            <h4>表の見方</h4>
+            <dl>
+              <dt>AAA-rate</dt>
+              <dd>この値が高いほどAAAの人の割合が高い譜面。表はこの値の降順で並べています。</dd>
+              <dt>Players</dt>
+              <dd>AAA率算出対象になったプレイヤーの数。この値が低いとプレイしている人数が少ない譜面なので、AAA-rateの値にブレがあるかも？</dd>
+              <dt>Your score</dt>
+              <dd>CSVを読み込むと表示されます。あなたのDJ RANKと、AAAとの差が表示されます。</dd>
+            </dl>
+            <h4>統計算出メモ</h4>
+            <p>
+              2020年9月某日時点で HEROIC VERSE にて皆伝を取得しており、公式サイトでスコアを公開しているユーザ、4488名のデータを元に算出。<br />
+              DJランクがC以下のデータは母数から排除。（ハード落ちとかの可能性を考慮したため）
+            </p>
+            <h4>補足</h4>
+            <p>
+              統計はあくまで自分向けに作ったものですので、正当性は一切保障しません。<br />
+              このページについても最低限動くよう突貫工事で作ったものであり、急に動かなくなったり消したりすることもあります。ご利用は自己責任で。
+            </p>
+            by <a href="https://twitter.com/MonochromeEDEN">kinaly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <a class="btn btn-secondary btn-block" href="https://p.eagate.573.jp/game/2dx/27/djdata/score_download.html" role="button" target="_blank">
+      Get CSV
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="container mt-3">
+    <form>
+      <div class="form-group">
+        <label for="input-csv">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+          </svg>
+          paste CSV
+        </label>
+        <textarea class="form-control" id="input-csv" rows="5"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" onclick="read_csv($('textarea#input-csv').val())">load CSV</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="table-responsive mt-3">
+      <table class="table table-sm" id="track_list">
+        <thead class="thead-light">
+          <tr>
+            <th>Song</th>
+            <th>AAA-rate</th>
+            <th>Players</th>
+            <th>Your score</th>
+            <th>AAA-border</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- /.table-responsive -->
+  </div>
+  <!-- /.container -->
+
+</body>
+
+</html>
