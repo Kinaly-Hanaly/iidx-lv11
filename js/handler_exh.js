@@ -1,7 +1,7 @@
 function display_table(tracks) {
 
   tracks.forEach((item, i) => {
-    $('#track-' + item['code'] + ' td.your-lamp').text(item['your_lamp']);
+    $('#track-' + item['code'] + ' td.your-lamp').text(trim_lamp_name(item['your_lamp']));
     if (item['your_lamp'] == 'EX HARD CLEAR') {
       $('#track-' + item['code']).addClass('table-warning');
     } else if (item['your_lamp'] == 'FULLCOMBO CLEAR') {

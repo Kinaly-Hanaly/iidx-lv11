@@ -2156,6 +2156,20 @@ var lv11_song_dict = new Set(
   ]
 );
 
+function trim_lamp_name(lamp_name) {
+  if (lamp_name == 'FULLCOMBO CLEAR') {
+    return 'FULL COMBO';
+  } else if (lamp_name == 'EX HARD CLEAR') {
+    return 'EX HARD';
+  } else if (lamp_name == 'HARD CLEAR') {
+    return 'HARD';
+  } else if (lamp_name == 'EASY CLEAR') {
+    return 'EASY';
+  } else if (lamp_name == 'ASSIST EASY CLEAR') {
+    return 'ASSIST';
+  }
+}
+
 
 function get_song_code(title) {
 
