@@ -31,7 +31,7 @@ $(function() {
   });
 
 
-  $('table#track_list').DataTable({
+  var table = $('table#track_list').DataTable({
     'order': [
       [1, 'desc']
     ],
@@ -47,6 +47,8 @@ $(function() {
 
   $('.dataTables_length').addClass('bs-select');
 
-
+  table.on('page.dt', function() {
+    $('.dataTables_scrollBody').scrollTop(0);
+  });
 
 });
