@@ -45,7 +45,7 @@ $(function() {
   $('.dataTables_length').addClass('bs-select');
 
   table.on('page.dt', function() {
-    $('.dataTables_scrollBody').scrollTop(0);
+    $('.dataTables_scrollBody').animate({scrollTop: 0}, 'slow');
   });
 
 });
