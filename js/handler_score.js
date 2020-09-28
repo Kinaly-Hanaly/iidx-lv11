@@ -18,22 +18,42 @@ function display_table(tracks) {
 }
 
 
-$(function(){
-    table_array.forEach((item, i) => {
-      var row_html = ''
-      row_html += '<tr id="track-';
-      row_html += item[0];
-      row_html += '"><td>'
-      row_html += item[1];
-      row_html += '</td><td>';
-      row_html += item[2];
-      row_html += '</td><td>';
-      row_html += item[3];
-      row_html += '</td><td class="your-score"></td><td class="aaa-border">';
-      row_html += item[5];
-      row_html += '</td></tr>';
+$(function() {
 
-      $('table#track_list tbody').append(row_html);
+  lv11_tracks = [];
 
-    });
+  table_array.forEach((item, i) => {
+    var row_html = ''
+    row_html += '<tr id="track-';
+    row_html += item[0];
+    row_html += '"><td>'
+    row_html += item[1];
+    row_html += '</td><td>';
+    row_html += item[2];
+    row_html += '</td><td>';
+    row_html += item[3];
+    row_html += '</td><td class="your-score"></td><td class="aaa-border">';
+    row_html += item[5];
+    row_html += '</td></tr>';
+
+    $('table#track_list tbody').append(row_html);
+
+  });
+
+  $('table#track_list').DataTable({
+    'order': [
+      [1, 'desc']
+    ],
+    'searching': false,
+    'scrollY': '50vh',
+    'scrollCollapse': true,
+    'lengthChange': false,
+    'pageLength': 50,
+    'drawCallback': function(settings) {
+      display_table(lv11_tracks);
+    }
+  });
+
+  $('.dataTables_length').addClass('bs-select');
+
 });

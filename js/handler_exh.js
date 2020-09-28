@@ -11,6 +11,9 @@ function display_table(tracks) {
 }
 
 $(function() {
+
+  lv11_tracks = [];
+
   table_array.forEach((item, i) => {
     var row_html = ''
     row_html += '<tr id="track-';
@@ -26,4 +29,24 @@ $(function() {
     $('table#track_list tbody').append(row_html);
 
   });
+
+
+  $('table#track_list').DataTable({
+    'order': [
+      [1, 'desc']
+    ],
+    'searching': false,
+    'scrollY': '50vh',
+    'scrollCollapse': true,
+    'lengthChange': false,
+    'pageLength': 50,
+    'drawCallback': function(settings) {
+      display_table(lv11_tracks);
+    }
+  });
+
+  $('.dataTables_length').addClass('bs-select');
+
+
+
 });

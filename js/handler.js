@@ -2189,7 +2189,7 @@ function read_csv(data) {
 
   var csv = $.csv.toObjects(data);
 
-  var lv11_tracks = [];
+  lv11_tracks = [];
 
   $(csv).each(function() {
     if (lv11_song_set.has(this['タイトル'])) {
