@@ -2201,6 +2201,7 @@ function read_csv(data) {
           type: 'HYPER',
           your_rank: this['HYPER DJ LEVEL'],
           your_score: this['HYPER EXスコア'],
+          your_miss: this['HYPER ミスカウント'],
           your_lamp: this['HYPER クリアタイプ']
         })
       }
@@ -2212,6 +2213,7 @@ function read_csv(data) {
           type: 'ANOTHER',
           your_rank: this['ANOTHER DJ LEVEL'],
           your_score: this['ANOTHER EXスコア'],
+          your_miss: this['ANOTHER ミスカウント'],
           your_lamp: this['ANOTHER クリアタイプ']
         })
       }
@@ -2223,6 +2225,7 @@ function read_csv(data) {
           type: 'LEGGENDARIA',
           your_rank: this['LEGGENDARIA DJ LEVEL'],
           your_score: this['LEGGENDARIA EXスコア'],
+          your_miss: this['LEGGENDARIA ミスカウント'],
           your_lamp: this['LEGGENDARIA クリアタイプ']
         })
       }
