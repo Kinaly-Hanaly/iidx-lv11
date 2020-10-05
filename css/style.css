@@ -10,3 +10,11 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }
+
+.tile {
+  width: 9px;
+  height: 9px;
+  margin: 1px;
+  border-radius: 2px;
+  background-color: #efefef;
+}

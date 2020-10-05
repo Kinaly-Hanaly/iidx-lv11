@@ -2235,4 +2235,6 @@ function read_csv(data) {
 
   display_table(lv11_tracks);
 
+  $('html,body').animate({scrollTop: $('#container-summary').offset().top}, 'slow');
+
 }
