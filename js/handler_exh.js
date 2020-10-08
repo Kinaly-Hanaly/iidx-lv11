@@ -1,9 +1,9 @@
-function display_table(tracks) {
+function display_table(csv_tracks) {
 
   var exh_tracks_num = 0;
   var fc_tracks_num = 0;
 
-  tracks.forEach((item, i) => {
+  csv_tracks.forEach((item, i) => {
     $('#track-' + item['code'] + ' td.your-lamp').text(trim_lamp_name(item['your_lamp']));
     $('#track-' + item['code'] + ' td.your-miss').text(item['your_miss']);
     if (item['your_lamp'] == 'EX HARD CLEAR') {
@@ -19,21 +19,22 @@ function display_table(tracks) {
 
 
   $('#your-exh-num').text(exh_tracks_num + fc_tracks_num);
-  if (tracks.length > 0) {
-    $('#your-exh-rate').text(Math.floor(((exh_tracks_num + fc_tracks_num) / tracks.length) * 100 * 10) / 10);
+  if (csv_tracks.length > 0) {
+    $('#your-exh-rate').text(Math.floor(((exh_tracks_num + fc_tracks_num) / table_array.length) * 100 * 10) / 10);
   } else {
     $('#your-exh-rate').text('---');
   }
   $('#progress-exh').text(exh_tracks_num);
   $('#progress-fc').text(fc_tracks_num);
-  $('#progress-exh').animate({
-    width: (exh_tracks_num / tracks.length) * 100 + '%'
-  }, 'fast');
-  if (tracks.length > 0) {
+  if (csv_tracks.length > 0) {
+    $('#progress-exh').animate({
+      width: (exh_tracks_num / table_array.length) * 100 + '%'
+    }, 'fast');
     $('#progress-fc').animate({
-      width: (fc_tracks_num / tracks.length) * 100 + '%'
+      width: (fc_tracks_num / table_array.length) * 100 + '%'
     }, 'fast');
   } else {
+    $('#progress-exh').width(0);
     $('#progress-fc').width(0);
   }
 

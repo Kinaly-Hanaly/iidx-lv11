@@ -1,8 +1,8 @@
-function display_table(tracks) {
+function display_table(csv_tracks) {
 
   var fc_tracks_num = 0;
 
-  tracks.forEach((item, i) => {
+  csv_tracks.forEach((item, i) => {
     $('#track-' + item['code'] + ' td.your-lamp').text(trim_lamp_name(item['your_lamp']));
     $('#track-' + item['code'] + ' td.your-miss').text(item['your_miss']);
     if (item['your_lamp'] == 'FULLCOMBO CLEAR') {
@@ -13,15 +13,15 @@ function display_table(tracks) {
   });
 
   $('#your-fc-num').text(fc_tracks_num);
-  if (tracks.length > 0) {
-    $('#your-fc-rate').text(Math.floor((fc_tracks_num / tracks.length) * 100 * 10) / 10);
+  if (csv_tracks.length > 0) {
+    $('#your-fc-rate').text(Math.floor((fc_tracks_num / table_array.length) * 100 * 10) / 10);
   } else {
     $('#your-fc-rate').text('---');
   }
   $('#progress-fc').text(fc_tracks_num);
-  if (tracks.length > 0) {
+  if (csv_tracks.length > 0) {
     $('#progress-fc').animate({
-      width: (fc_tracks_num / tracks.length) * 100 + '%'
+      width: (fc_tracks_num / table_array.length) * 100 + '%'
     }, 'fast');
   } else {
     $('#progress-fc').width(0);

@@ -1,8 +1,8 @@
-function display_table(tracks) {
+function display_table(csv_tracks) {
 
   var aaa_tracks_num = 0;
 
-  tracks.forEach((item, i) => {
+  csv_tracks.forEach((item, i) => {
     aaa_border = Number($('#track-' + item['code'] + ' td.aaa-border').text());
     your_score = Number(item['your_score']);
     if (your_score >= aaa_border) {
@@ -20,15 +20,15 @@ function display_table(tracks) {
   });
 
   $('#your-aaa-num').text(aaa_tracks_num);
-  if (tracks.length > 0) {
-    $('#your-aaa-rate').text(Math.floor((aaa_tracks_num / tracks.length) * 100 * 10) / 10);
+  if (csv_tracks.length > 0) {
+    $('#your-aaa-rate').text(Math.floor((aaa_tracks_num / table_array.length) * 100 * 10) / 10);
   } else {
     $('#your-aaa-rate').text('---');
   }
   $('#progress-aaa').text(aaa_tracks_num);
-  if (tracks.length > 0) {
+  if (csv_tracks.length > 0) {
     $('#progress-aaa').animate({
-      width: (aaa_tracks_num / tracks.length) * 100 + '%'
+      width: (aaa_tracks_num / table_array.length) * 100 + '%'
     }, 'fast');
   } else {
     $('#progress-aaa').width(0);
