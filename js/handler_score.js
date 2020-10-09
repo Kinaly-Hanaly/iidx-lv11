@@ -15,7 +15,7 @@ function display_table(csv_tracks) {
     if (item['your_rank'] == 'AAA') {
       $('#track-' + item['code']).addClass('table-success');
       aaa_tracks_num += 1;
-      $('#tile-' + item['code']).addClass('bg-success');
+      $('#tile-' + item['code']).addClass('bg-aaa');
     }
   });
 

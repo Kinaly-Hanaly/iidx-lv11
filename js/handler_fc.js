@@ -8,7 +8,7 @@ function display_table(csv_tracks) {
     if (item['your_lamp'] == 'FULLCOMBO CLEAR') {
       $('#track-' + item['code']).addClass('table-info');
       fc_tracks_num += 1;
-      $('#tile-' + item['code']).addClass('bg-info');
+      $('#tile-' + item['code']).addClass('bg-fc');
     }
   });
 

@@ -10,15 +10,15 @@ function display_table(csv_tracks) {
     if (item['your_lamp'] == 'HARD CLEAR') {
       $('#track-' + item['code']).addClass('table-danger');
       hard_tracks_num += 1;
-      $('#tile-' + item['code']).addClass('bg-danger');
+      $('#tile-' + item['code']).addClass('bg-hard');
     }else if (item['your_lamp'] == 'EX HARD CLEAR') {
       $('#track-' + item['code']).addClass('table-warning');
       exh_tracks_num += 1;
-      $('#tile-' + item['code']).addClass('bg-warning');
+      $('#tile-' + item['code']).addClass('bg-exh');
     } else if (item['your_lamp'] == 'FULLCOMBO CLEAR') {
       $('#track-' + item['code']).addClass('table-info');
       fc_tracks_num += 1;
-      $('#tile-' + item['code']).addClass('bg-info');
+      $('#tile-' + item['code']).addClass('bg-fc');
     }
   });
 

@@ -18,3 +18,19 @@ table.dataTable thead .sorting_desc_disabled:before {
   border-radius: 2px;
   background-color: #efefef;
 }
+
+.tile.bg-aaa {
+  background-color: rgba(76, 175, 80, 0.7);
+}
+
+.tile.bg-hard {
+  background-color: rgba(244, 67, 54, 0.7);
+}
+
+.tile.bg-exh {
+  background-color: rgba(255, 152, 0, 0.7);
+}
+
+.tile.bg-fc {
+  background-color: rgba(0, 188, 212, 0.7);
+}
