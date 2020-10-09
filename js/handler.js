@@ -421,7 +421,6 @@ var lv11_song_set = new Set([
   "VALKYRIAS -英雄誕生-",
   "Volcanic Dragon",
   "ガヴリールドロップキック",
-  "シャムシールの舞",
   "バッドエンド・シンドローム",
   "ランカーキラーガール",
   "令和(1991RAVE REMIX)",

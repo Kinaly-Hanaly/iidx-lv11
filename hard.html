@@ -32,7 +32,7 @@
   <!-- Custom  -->
   <link rel="stylesheet" href="css/style.css">
 
-  <title>SP☆11 EX-HARDめざせの表</title>
+  <title>SP☆11 全白めざせの表</title>
 </head>
 
 <body>
@@ -51,20 +51,20 @@
   <script type="text/javascript" src="mdb/js/addons/datatables.min.js" charset="utf-8"></script>
 
   <script src="js/handler.js" charset="utf-8"></script>
-  <script src="js/handler_exh.js" charset="utf-8"></script>
-  <script src="js/exh_table_list.js" charset="utf-8"></script>
+  <script src="js/handler_hard.js" charset="utf-8"></script>
+  <script src="js/hard_table_list.js" charset="utf-8"></script>
 
   <div class="container">
-    <h2>SP☆11 EX-HARDめざせの表</h2>
+    <h2>SP☆11 全白めざせの表</h2>
     <ul class="nav nav-pills nav-fill">
       <li class="nav-item">
         <a class="nav-link" href="index.html">AAA</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="hard.html">HARD</a>
+        <a class="nav-link active" href="#">HARD</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">EX-HARD</a>
+        <a class="nav-link" href="ex-hard.html">EX-HARD</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="full_combo.html">F-COMBO</a>
@@ -88,14 +88,14 @@
           <div class="card-body">
             <h4>なにこれ？</h4>
             <p>
-              IIDXのSP☆11譜面について、皆伝さんのEX-HARD率を計算したものです。自分のエクハ増やしの参考にしたくて作りました。<br />
+              IIDXのSP☆11譜面について、十段さんのHARD率を計算したものです。<br />
               「paste CSV」のテキストボックスに公式サイトのCSV(SP)を貼り付け「load CSV」ボタンをクリックすると、自分のクリアランプと比較できます。<br />
               保存機能は作ってないので、スクショを撮るなりして使ってください。
             </p>
             <h4>表の見方</h4>
             <dl>
-              <dt>EXH-rate</dt>
-              <dd>この値が高いほどEX-HARDの人の割合が高い譜面。表はこの値の降順で並べています。</dd>
+              <dt>HARD-rate</dt>
+              <dd>この値が高いほどHARDの人の割合が高い譜面。表はこの値の降順で並べています。</dd>
               <dt>Players</dt>
               <dd>算出対象になったプレイヤーの数。</dd>
               <dt>Your lamp</dt>
@@ -103,12 +103,13 @@
             </dl>
             <h4>統計算出メモ</h4>
             <p>
-              2020年9月某日時点で HEROIC VERSE にて皆伝を取得しており、公式サイトでスコアを公開しているユーザ、4524名のデータを元に算出。<br />
+              2020年9月某日時点で HEROIC VERSE にて十段を取得しており、公式サイトでスコアを公開しているユーザ、4719名のデータを元に算出。<br />
               NO PLAY は母数から排除。
             </p>
             <h4>補足</h4>
             <p>
               統計はあくまで自分向けに作ったものですので、正当性は一切保障しません。<br />
+              （quasarが一番ハードしやすいわけなかろう...orz）<br />
               このページについても最低限動くよう突貫工事で作ったものであり、急に動かなくなったり消したりすることもあります。ご利用は自己責任で。
             </p>
             by <a href="https://twitter.com/MonochromeEDEN">kinaly</a>
@@ -145,11 +146,12 @@
 
   <div id="container-summary" class="container mt-3">
     <h3>
-      EX-HARD: <span id="your-exh-num">0</span> / <span id="total-track-num"></span> ( <span id="your-exh-rate">---</span> %)
+      HARD: <span id="your-hard-num">0</span> / <span id="total-track-num"></span> ( <span id="your-hard-rate">---</span> %)
     </h3>
     <div class="progress" style="height: 30px">
       <div class="progress-bar progress-bar-striped bg-info" id="progress-fc" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0</div>
       <div class="progress-bar progress-bar-striped bg-warning" id="progress-exh" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0</div>
+      <div class="progress-bar progress-bar-striped bg-danger" id="progress-hard" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0</div>
     </div>
   </div>
 
@@ -165,7 +167,7 @@
         <thead class="thead-light">
           <tr>
             <th>Song</th>
-            <th>EXH-rate</th>
+            <th>HARD-rate</th>
             <th>Players</th>
             <th>Your lamp</th>
             <th>Your miss</th>
