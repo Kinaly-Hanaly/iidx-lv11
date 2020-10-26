@@ -2196,6 +2196,8 @@ function trim_lamp_name(lamp_name) {
     return 'EASY';
   } else if (lamp_name == 'ASSIST EASY CLEAR') {
     return 'ASSIST';
+  } else {
+    return lamp_name;
   }
 }
 
