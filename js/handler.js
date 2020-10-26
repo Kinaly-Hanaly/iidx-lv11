@@ -427,7 +427,13 @@ var lv11_song_set = new Set([
   "曼荼羅恋々",
   "眠りの国のステラ",
   "錬成人間トリコロイダー",
-  "開きたまえ！Next stAge！"
+  "開きたまえ！Next stAge！",
+  "Bahram Attack-猫叉Master Remix-",
+  "シャムシールの舞",
+  "Ypsilon",
+  "Advent Infamous",
+  "GHOST",
+  "狂水一華"
 ]);
 
 
@@ -2151,7 +2157,31 @@ var lv11_song_dict = new Set(
     {
       title: "開きたまえ！Next stAge！",
       code: "S027-0060"
-    }
+    },
+    {
+      title: "Bahram Attack-猫叉Master Remix-",
+      code: "S016-0005"
+    },
+    {
+      title: "シャムシールの舞",
+      code: "S027-0099"
+    },
+    {
+      title: "Ypsilon",
+      code: "S027-0100"
+    },
+    {
+      title: "Advent Infamous",
+      code: "S027-0102"
+    },
+    {
+      title: "GHOST",
+      code: "S027-0103"
+    },
+    {
+      title: "狂水一華",
+      code: "S027-0106"
+    },
   ]
 );
 

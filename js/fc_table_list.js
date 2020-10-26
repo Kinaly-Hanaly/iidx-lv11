@@ -428,6 +428,11 @@ var table_array = [
   ["S025-0038-SPA", "HYPE THE CORE", "0.397%", "2773", "11"],
   ["S023-0006-SPA", "Battle Train -IIDX Edition-", "0.313%", "2880", "9"],
   ["S021-0049-SPA", "SCHWARZSCHILD FIELD", "0.220%", "3179", "7"],
-  ["S023-0046-SPA", "Routing", "0.181%", "3307", "6"]
-
+  ["S023-0046-SPA", "Routing", "0.181%", "3307", "6"],
+  ["S016-0005-SPL", "Bahram Attack-猫叉Master Remix-","","",""],
+  ["S027-0099-SPA", "シャムシールの舞","","",""],
+  ["S027-0100-SPA", "Ypsilon","","",""],
+  ["S027-0102-SPA", "Advent Infamous","","",""],
+  ["S027-0103-SPA", "GHOST","","",""],
+  ["S027-0106-SPA", "狂水一華","","",""]
 ];
